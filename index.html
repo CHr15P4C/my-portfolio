@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my-portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="projects-data.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
    <header class="main-header">
@@ -12,9 +14,9 @@
             <h1 class="site-title">My-Portfolio CPAN-134 Chris Pacitti n01712516</h1>
             <nav class="main-nav">
                 <ul class="nav-list">
-                <li><a href="#about" data-section="about">About</a></li>
-                <li><a href="#projects" data-section="projects">Projects</a></li>
-                <li><a href="#contact" data-section="contact">Contact</a></li>
+                    <li><a id='about-button'>About</a></li>
+                    <li><a id="projects-button">Projects</a></li>
+                    <li><a id="contact-button">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -26,21 +28,24 @@
 
         
 
-        <section id="about" class="about section active">
+        <section id="about" class="about-section section active">
             <div class="about-content">
                 <h2 class="about-title">About Section</h2>
                 <p class="about-subtitle">Hello. My name is Christopher Pacitti. Hopefully eventually, this will link to a javascript constant</p>
             </div>
         </section>
 
-        <section id="projects" class="projects section active">
+        <section id="projects" class="projects-section section">
             <div class="projects-content">
                 <h2 class="projects-title">Projects Section</h2>
                 <p class="projects-subtitle">This is placeholder text for projects hopefully coming soon</p>
+                <div id="projects-grid" class="projects-grid">
+
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="contact section active">
+        <section id="contact" class="contact-section section">
             <div class="contact-content">
                 <h2 class="contact-title">Contact Section</h2>
                 <p class="contact-subtitle">This will be filled with my personal information so you can contact me</p>
@@ -54,5 +59,13 @@
             <p>&copy; Christopher Pacitti. All rights reserved.</p>
         </div>
     </footer>
+
+      <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-project-content"></div>
+        </div>
+    </div>
+    
 </body>
 </html>
