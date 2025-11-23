@@ -1,7 +1,10 @@
 class porfolioPage {
     constructor() {
         this.project = projects;
+        
         this.init();
+        this.closeModal();
+        this.closeFormModal();
     }
   
     //init
@@ -40,10 +43,58 @@ class porfolioPage {
                 this.closeModal();
             }
         });
+        //event listeners for the contact section
+        //popup closer listeners
+        document.querySelector('.close-modal-form').addEventListener('click', () => {
+            this.closeFormModal();
+        });
+        document.getElementById('form-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'form-modal') {
+                this.closeFormModal();
+            }
+        });
 
-
+        //form buttons
+        document.getElementById('submit').addEventListener('click', () => {
+            this.formValidation();
+        });
+        document.getElementById('reset').addEventListener('click', () => {
+            this.clearForm();
+        });
     }
-
+    //email validation
+    emailIsValid (emailIn) {
+    return /\S+@\S+\.\S+/.test(emailIn)
+    }
+    //form validation function
+    formValidation() {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const comment = document.getElementById('comment').value.trim(); 
+        var formMessage = '';
+        let validationCheck = true;
+        if (name == '') {
+            formMessage = "Missing Name.";
+            validationCheck=false;
+        } 
+        if (this.emailIsValid(email) == false) {
+            
+            formMessage = formMessage + " Missing or wrong Email.";
+            validationCheck=false;
+        } 
+        if (comment == '') {
+            
+            formMessage = formMessage + " Missing comment.";
+            validationCheck=false;
+        } 
+        if (validationCheck == true) {
+            formMessage = "Submitted!";
+            this.showFormModal(formMessage);
+        } else {
+            this.showFormModal(formMessage);
+            this.clearForm();
+        }
+    }
     //function to load in project data from projects-data.js
     renderProjects() {
         
@@ -78,7 +129,31 @@ class porfolioPage {
             });
         });
     }
+    //show form validation popup
+    showFormModal(formMessage) {
+        const modal = document.getElementById('form-modal');
+        const content = document.getElementById('modal-form-content');
 
+        content.innerHTML = `
+            <h2 class='modal-form-text'>${formMessage}</h2>        
+        `;
+        modal.style.display= 'block';
+        
+    }
+    //close the popup
+    closeFormModal() {
+        document.getElementById('form-modal').style.display = 'none';
+    }
+    //clear the form fields
+    clearForm() {
+        console.log("clearing")
+        const name = document.getElementById('name');
+        name.value="";
+        const email =  document.getElementById('email');
+        email.value="";
+        const comment = document.getElementById('comment');
+        comment.value="";
+        }
     //show a project as a popup
     showProjectModal(projectId) {
         const project = this.project.find(r => r.id === projectId);

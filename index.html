@@ -48,8 +48,25 @@
         <section id="contact" class="contact-section section">
             <div class="contact-content">
                 <h2 class="contact-title">Contact Section</h2>
-                <p class="contact-subtitle">This will be filled with my personal information so you can contact me</p>
-            </div>
+                    <div class = "contact-form">
+                     <label for="name">Full Name:</label>
+                     <input type="text" id="name" name="name" required>
+                     
+                     <label for="email">Email Address:</label>
+                     <input type="email" id="email" name="email" required>
+                     
+                     <label for="comment">Comment:</label>
+                     <input type="comment" id="comment" name="comment" required>
+
+                     
+                     <label><input type="checkbox" name="newsletter">Subscribe to newsletter to get the spam</label>
+                     <br>
+                     <section>
+                         <input type="submit" id="submit" class="submit-input"></input>
+                         <input type="reset" id="reset" class="reset-input"></input>
+                     </section>
+                     </div>
+                     </div>
         </section>
     </main>
 
@@ -64,6 +81,13 @@
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <div id="modal-project-content"></div>
+        </div>
+    </div>
+
+    <div id="form-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal-form">&times;</span>
+            <div id="modal-form-content"></div>
         </div>
     </div>
     

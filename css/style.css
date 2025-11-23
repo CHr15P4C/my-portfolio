@@ -142,21 +142,42 @@ body{
     height: 400px;
 }
 
+*/
 
+/*contact Section*/
 
-
-/*Contact Section*/
-/*
-.contact-content{
+.contact-content div{
     background-color: var(--section-bg-color);
     border: solid 5px var(--dark-border-color);
     margin: 20px;
     padding: 20px;
     border-radius: 7px;
-    height: 400px;
+    height: auto;
 }
 
+input[type="text"], input[type="email"], input[type="comment"]{
+    width: 100%;
+    
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid var(--dark-border-color);
+    box-sizing: border-box;
+    border-radius: 6px;}
 
+input[type="submit"], input[type="reset"]{
+   background-color: var(--button-bg-color); 
+   color: var(--section-bg-color);
+   font-family:  arial;
+   font-size: large;
+   padding: 10px;
+   border: black;
+   border-width: 5px;
+   border-style: ridge;
+   border-radius: 3px;
+   cursor: pointer;
+   width: 100%;
+   margin: 4px;
+}
 
 
 
