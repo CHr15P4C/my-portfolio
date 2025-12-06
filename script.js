@@ -33,10 +33,22 @@ class porfolioPage {
             showSection('contact');
         });
         //darkmode
-        document.getElementById('mode-button').addEventListener('click', () => {
-            console.log(document.getElementById('mode-button').innerHTML);
-            this.changeMode();
-        });
+        
+            document.getElementById('mode-button').addEventListener('click', () => {
+                console.log(document.getElementById('mode-button').innerHTML);
+                var currentMode = document.getElementById('mode-button');
+                if (currentMode.innerHTML == 'Dark Mode') {
+                    this.changeModeDark();
+                    currentMode.innerHTML = 'Light Mode';
+                    return;
+                } 
+                if (currentMode.innerHTML == 'Light Mode') {
+                    this.changeModeLight();
+                    currentMode.innerHTML = 'Dark Mode';
+                    return;
+                }
+            });
+    
 
         //for closing modal content
         document.querySelector('.close-modal').addEventListener('click', () => {
@@ -192,13 +204,38 @@ class porfolioPage {
     }
 
     //dark mode stuff here.
-    changeMode() {
-        const mode = document.getElementById('mode-button');
-        if (mode.innerHTML == 'Dark Mode') {
+    changeModeDark() {
+        
+        
             console.log('mode match dark');
-            document.documentElement.style.setProperty('--sub-txt-color', '#e7e7eeff');
-            document.documentElement.style.setProperty('--title-txt-color', '#34f123ff');
-        }
+            document.documentElement.style.setProperty('--sub-txt-color', '#71ce4cff');
+            document.documentElement.style.setProperty('--title-txt-color', '#3edf29ff');
+            document.documentElement.style.setProperty('--head-foot-txt-color', '#1f1c1cff');
+            document.documentElement.style.setProperty('--body-bg-color', '#3b3939ff');
+            document.documentElement.style.setProperty('--section-bg-color', '#1e1e20ff');
+            document.documentElement.style.setProperty('--head-foot-bg-color', '#33ff00ff');
+            document.documentElement.style.setProperty('--button-bg-color', '#53c249ff');
+            document.documentElement.style.setProperty('--dark-border-color', '#00cf00ff');
+            document.documentElement.style.setProperty('--light-border-color', '#21c03cff');
+            document.documentElement.style.setProperty('--modal-bg-outer-color', 'rgba(85, 81, 85, 0.9)');
+                    
+    }
+    changeModeLight() {
+
+        
+            console.log('mode match light');
+            document.documentElement.style.setProperty('--sub-txt-color', '#212122');
+            document.documentElement.style.setProperty('--title-txt-color', '#0f0f0f');
+            document.documentElement.style.setProperty('--head-foot-txt-color', '#ffffff');
+            document.documentElement.style.setProperty('--body-bg-color', '#a5a5a5');
+            document.documentElement.style.setProperty('--section-bg-color', '#f7f7fa');
+            document.documentElement.style.setProperty('--head-foot-bg-color', '#000000');
+            document.documentElement.style.setProperty('--button-bg-color', '#343435');
+            document.documentElement.style.setProperty('--dark-border-color', '#14141b');
+            document.documentElement.style.setProperty('--light-border-color', '#716ffa');
+            document.documentElement.style.setProperty('--modal-bg-outer-color', 'rgba(196, 184, 197, 0.9)');
+            
+        
     }
 
 }
