@@ -32,6 +32,11 @@ class porfolioPage {
             
             showSection('contact');
         });
+        //darkmode
+        document.getElementById('mode-button').addEventListener('click', () => {
+            console.log(document.getElementById('mode-button').innerHTML);
+            this.changeMode();
+        });
 
         //for closing modal content
         document.querySelector('.close-modal').addEventListener('click', () => {
@@ -186,10 +191,19 @@ class porfolioPage {
         document.getElementById('project-modal').style.display = 'none';
     }
 
+    //dark mode stuff here.
+    changeMode() {
+        const mode = document.getElementById('mode-button');
+        if (mode.innerHTML == 'Dark Mode') {
+            console.log('mode match dark');
+            document.documentElement.style.setProperty('--sub-txt-color', '#e7e7eeff');
+            document.documentElement.style.setProperty('--title-txt-color', '#34f123ff');
+        }
+    }
 
 }
 
-  //FUNCTION TO SHOW A SECTION
+  //FUNCTION TO SHOW A SECTION, idk why this was not working within the class. It was late at night....
    function showSection(sectionName) {
         //hides all sections
         document.querySelectorAll('.section').forEach(section => {
