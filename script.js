@@ -5,7 +5,9 @@ class porfolioPage {
         this.init();
         this.closeModal();
         this.closeFormModal();
-    }
+        
+        
+        }
   
     //init
     init(){
@@ -26,11 +28,22 @@ class porfolioPage {
             //render the projects first
             this.renderProjects();
             showSection('projects');
+            //load in title with animation
+            var projectstitle = new Typed('#projects-id', {
+            strings: ['Projects Section'],
+            typeSpeed: 50,
+             });
+            
         });
 
         document.getElementById('contact-button').addEventListener('click', () => {
             
             showSection('contact');
+            //title animation
+            var cotacttitle = new Typed('#contact-id', {
+            strings: ['Contact Section'],
+            typeSpeed: 50,
+             });
         });
         //darkmode
         
