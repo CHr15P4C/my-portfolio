@@ -20,6 +20,9 @@
     /*border colors*/
     --dark-border-color: #14141b;
     --light-border-color: #716ffa;
+
+    /*modal color*/
+    --modal-bg-outer-color: rgba(196, 184, 197, 0.9);
 }
 
 body{
@@ -234,6 +237,7 @@ width: 100%;
 /*for modal content*/
 
 .modal {
+    
     display: none;
     position: fixed;
     z-index: 1000;
@@ -241,15 +245,16 @@ width: 100%;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--body-bg-color);
+    background-color: var(--modal-bg-outer-color);
     display: flex;
 }
 
 .modal-content {
-    background-color: var(--button-bg-color);
+   
+    background-color: var(--section-bg-color);
     margin: 10% auto;
     padding: 10px;
-    border: 5px solid var(--light-border-color);
+    border: 5px solid var(--dark-border-color);
     width: auto;
     height: auto;
     max-width: 60%;
