@@ -8,11 +8,14 @@
     <script defer src="projects-data.js"></script>
     <script defer src="script.js"></script>
     <script defer src="location.js"></script>
+    <!-- api for typed animation -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script defer src="typed-scripts.js"></script>
 </head>
 <body>
    <header class="main-header">
         <div class="header-content">
-            <h1 class="site-title">My-Portfolio CPAN-134 Chris Pacitti n01712516</h1>
+            <h1 class="site-title" id="site-title-id"></h1>
             <nav class="main-nav">
                 <ul class="nav-list">
                     <li><a id='about-button'>About</a></li>
@@ -32,7 +35,7 @@
 
         <section id="about" class="about-section section active">
             <div class="about-content">
-                <h2 class="about-title">About Section</h2>
+                <h2 class="about-title" id="about-id">About Section</h2>
                 <p class="about-subtitle">Hello. My name is Christopher Pacitti. This Portfolio is for the CPAN-134 class.</p>
             </div>
             <div class="api-content">
