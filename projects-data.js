@@ -79,5 +79,22 @@ const projects = [
         desc:  "an incomplete assignment that was done but not uploaded.",
         repo:  "https://github.com/CHr15P4C/lab6-asynchronous-javascript",
         pages:  "empty"
+    },
+
+    {
+        id: 10,
+        name: "Personal Project Clicker Game",
+        desc: "This was the most fun thing that I got to do all course. Unfortunately it is not for marks.",
+        repo: "https://github.com/CHr15P4C/CPAN-116-RNA-GroupProj-Clicker",
+        pages: "https://chr15p4c.github.io/CPAN-116-RNA-GroupProj-Clicker/"
+    },
+
+    {
+        id: 11,
+        name: "Group Project CPAN-113",
+        desc: "After several restarts, a smaller goal of a website that provides quotes was chosen.",
+        repo: "https://github.com/felixtheschool/my-app",
+        pages: "https://felixtheschool.github.io/my-app/"
     }
+
 ]

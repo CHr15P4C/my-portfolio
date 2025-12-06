@@ -190,7 +190,10 @@ input[type="submit"], input[type="reset"]{
    margin: 4px;
 }
 
-
+.submit-input:hover, .reset-input:hover{
+    background-color: var(--section-bg-color);
+    color: var(--head-foot-bg-color);
+}
 
 
 /*Footer*/
@@ -218,7 +221,10 @@ width: 100%;
         font-size: 30px;
         text-align: center;
     }
-
+    .main-content{
+    margin-top: 250px;
+    margin-bottom: 60px;
+}
     .nav-list li{
     display: block;
     text-align: center;
