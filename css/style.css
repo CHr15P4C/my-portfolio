@@ -269,6 +269,13 @@ width: 100%;
     max-width: 60%;
 }
 
+.modal-content a{
+    color: var(--title-txt-color);
+}
+.modal-content a:hover{
+    color: var(--head-foot-txt-color);
+    background-color: var(--title-txt-color);
+}
 .close-modal {
     color: var(--title-txt-color);
     float: right;

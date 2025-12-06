@@ -202,9 +202,9 @@ class porfolioPage {
             
             <p class="modal-project-desc">${project.desc}</p>
             
-            <p class="modal-project-repo">${project.repo}</p>
+            <a class="modal-project-repo" href="${project.repo}" target="_blank">Repository Link</a>
             
-            <p class="modal-project-pages">${project.pages}</p>
+            <a class="modal-project-pages" href="${project.pages}" target="_blank">Pages Link</a>
 
         `;
 
